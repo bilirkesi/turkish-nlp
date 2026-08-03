@@ -1,0 +1,22 @@
+{
+  "name": "Osmanlica-Bench-v1",
+  "license": "mit",
+  "description": "Benchmark dataset for Ottoman Turkish transliteration",
+  "size": "6500 samples",
+  "split": {
+    "train": 5000,
+    "validation": 500,
+    "test": 1000
+  },
+  "metrics": {
+    "CER": "6.46%",
+    "WER": "20.69%",
+    "BLEU": "77.18"
+  },
+  "sources": [
+    "Servet-i Funun (1896-1901)",
+    "Ruznamçe Registers (17th century)",
+    "TBMM Proceedings (1920s)",
+    "OTC Corpus samples"
+  ]
+}

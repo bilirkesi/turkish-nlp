@@ -1,0 +1,6 @@
+ottoman,turkish,confidence,method
+"بسم الله الرحمن الرحيم","Bismillahirrahmanirrahim",0.95,neural
+"عثمانلي توركجهسى","Osmanlı Türkçesi",0.88,neural
+"مكتبة عثمانية","Mekteb-i Osmani",0.82,nlp
+"التعليم العثماني","Osmanlı Eğitimi",0.85,hybrid
+"الدولة العثمانية","Osmanlı Devleti",0.90,neural

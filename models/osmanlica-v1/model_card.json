@@ -1,0 +1,32 @@
+{
+  "model_name": "Osmanlica Transliterator v1",
+  "model_library": "custom",
+  "license": "mit",
+  "pipeline_tag": "translation",
+  "language": "tr",
+  "tags": [
+    "ottoman-turkish",
+    "turkish",
+    "transliteration",
+    "nlp",
+    "historical",
+    "digital-humanities"
+  ],
+  "widget": [
+    {
+      "text": "عثمانلي توركجهسى"
+    }
+  ],
+  "config": {
+    "model_type": "custom",
+    "architectures": ["OttomanTransliterationPipeline"],
+    "model_class": "OttomanTransliterationPipeline",
+    "tokenizer_class": null
+  },
+  "datasets": [
+    {
+      "name": "Osmanlica-Bench-v1",
+      "license": "mit"
+    }
+  ]
+}
