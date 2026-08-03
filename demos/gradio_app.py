@@ -1,7 +1,3 @@
-"""
-Gradio Demo for Osmanlica Transliterator
-"""
-
 import gradio as gr
 from ottoman_transliterator import OttomanTransliterationPipeline
 
@@ -97,6 +93,6 @@ with gr.Blocks(title="Osmanlica Transliterator") as demo:
 if __name__ == "__main__":
     demo.launch(
         server_name="0.0.0.0",
-        server_port=7860,
-        share=True
+        server_port=7861,
+        share=False
     )
