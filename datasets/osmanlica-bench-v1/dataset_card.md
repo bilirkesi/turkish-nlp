@@ -1,5 +1,20 @@
 ---
 license: mit
+language:
+- tr
+tags:
+- ottoman-turkish
+- turkish
+- transliteration
+- benchmark
+- dataset
+size_categories:
+- n<1K
+- 1K<n<10K
+task_categories:
+- translation
+task_ids:
+- machine-translation
 ---
 
 # Dataset Card for Osmanlica-Bench-v1

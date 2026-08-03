@@ -1,5 +1,18 @@
 ---
 license: mit
+language:
+- tr
+task:
+- translation
+tags:
+- ottoman-turkish
+- turkish
+- transliteration
+- nlp
+- historical
+- digital-humanities
+pipeline_tag: translation
+library_name: custom
 ---
 
 # Model Card for Osmanlica Transliterator v1
