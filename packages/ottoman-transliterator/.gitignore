@@ -1,0 +1,54 @@
+# Dependencies
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models (large files, download at runtime)
+models/
+*.bin
+*.safetensors
+*.gguf
+
+# Data (large files)
+data/*.zip
+data/*.tar.gz
+data/cache/
+
+# Logs
+*.log
+logs/
+
+# Benchmarks (intermediate results)
+benchmarks/results/*.json
+!benchmarks/results/README.md
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
