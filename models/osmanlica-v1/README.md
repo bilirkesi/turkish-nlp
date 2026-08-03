@@ -1,25 +1,21 @@
-# Osmanlica Model Card
+---
+license: mit
+language:
+- tr
+tags:
+- ottoman-turkish
+- turkish
+- transliteration
+- nlp
+- historical
+- digital-humanities
+---
 
-## Model Overview
+# Osmanlica Transliterator v1
 
-**Osmanlica Transliterator v1** is a production-grade pipeline for Ottoman Turkish → Modern Turkish transliteration.
+A production-grade pipeline for Ottoman Turkish ↔ Modern Turkish transliteration.
 
-### Key Features
-- Hybrid neural + rule-based approach
-- DeepSeek V4 Flash integration
-- Confidence scoring
-- Uncertainty marking
-- Batch processing support
-
-### Performance Metrics
-
-| Metric | Value |
-|--------|-------|
-| CER | 6.46% |
-| WER | 20.69% |
-| BLEU | 77.18 |
-
-### Usage
+## Quick Start
 
 ```python
 from ottoman_transliterator import OttomanTransliterationPipeline
@@ -30,23 +26,14 @@ print(result.modern_turkish)  # "Osmanlı Türkçesi"
 print(result.confidence)      # 0.85
 ```
 
-### Installation
+## Installation
 
 ```bash
 pip install ottoman-transliterator
 ```
 
-### License
+## Documentation
 
-MIT License
-
-### Citation
-
-```bibtex
-@misc{osmanlica2026,
-  title={Osmanlica: A Production-Ready Pipeline for Ottoman Turkish Transliteration},
-  author={Bilirkesi AI Team},
-  year={2026},
-  url={https://github.com/bilirkesi/turkish-nlp}
-}
-```
+- [GitHub](https://github.com/bilirkesi/turkish-nlp)
+- [PyPI](https://pypi.org/project/ottoman-transliterator/)
+- [Benchmark Report](https://github.com/bilirkesi/turkish-nlp/blob/main/docs/BENCHMARK_REPORT_v1.md)
