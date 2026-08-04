@@ -1,15 +1,75 @@
-# Turkish NLP
-.git
+# Python
 __pycache__/
-*.pyc
-*.pyo
-venv/
-env/
-*.egg-info/
-dist/
+*.py[cod]
+*$py.class
+*.so
+.Python
 build/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+logs/
+demo.log
+
+# Config
+.env
+.env.local
+!.env.example
+
+# Data
+data/
+!data/.gitkeep
+models/
+!models/.gitkeep
+!models/prompts/
+
+# Tests
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Distribution
+*.tar.gz
+*.whl
+
+# Cache
+.caches/
+*.cache
+
+# Gradio
+.gradio/
+
+# Old repos
+ottoman-agent-pipeline/

@@ -1,95 +1,125 @@
-# Turkish NLP
+# Turkish NLP - Ottoman Language Processing
 
-> High-quality, production-ready NLP tools for Turkish language processing.
+**Turkish NLP** is a comprehensive project for Ottoman Turkish language processing, featuring:
+
+1. **Transliteration Pipeline** - Ottoman Turkish ↔ Modern Turkish conversion
+2. **Agent Pipeline** - AI agent with tools, models, and session management
+3. **Desktop App** - Electron-based desktop application
+4. **Mobile App** - React Native mobile application
+
+---
 
 ## 📦 Packages
 
-### ottoman-transliterator
+### 1. Ottoman Transliterator
+Production-grade transliteration pipeline.
 
-Production-grade Ottoman Turkish ↔ Modern Turkish transliteration pipeline.
-
-[![PyPI version](https://img.shields.io/pypi/v/ottoman-transliterator)](https://pypi.org/project/ottoman-transliterator/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-**Features:**
-- Hybrid neural + rule-based transliteration
-- DeepSeek V4 Flash integration
-- TurkicNLP morphological analysis
-- Confidence scoring & uncertainty marking
-- Batch processing support
-- REST API + CLI
-
-**Quick Start:**
+**Install:**
 ```bash
 pip install ottoman-transliterator
 ```
 
+**Usage:**
 ```python
 from ottoman_transliterator import OttomanTransliterationPipeline
 
 pipeline = OttomanTransliterationPipeline()
 result = pipeline.transliterate("عثمانلي توركجهسى")
 print(result.modern_turkish)  # "Osmanlı Türkçesi"
-print(result.confidence)      # 0.85
 ```
 
-**Documentation:** [packages/ottoman-transliterator/README.md](./packages/ottoman-transliterator/README.md)
+**Docs:** [packages/ottoman-transliterator/README.md](packages/ottoman-transliterator/README.md)
 
 ---
 
-## 🏗️ Repository Structure
+### 2. Ottoman Agent Pipeline
+Full-featured AI agent with tools, models, and API.
 
+**Install:**
+```bash
+pip install -e ottoman-agent-pipeline
 ```
-turkish-nlp/
-├── packages/
-│   └── ottoman-transliterator/   # Ottoman Turkish transliteration
-│       ├── src/
-│       │   └── ottoman_transliterator/
-│       │       ├── __init__.py
-│       │       ├── pipeline.py
-│       │       └── cli.py
-│       ├── tests/
-│       │   └── test_pipeline.py
-│       ├── docs/
-│       ├── pyproject.toml
-│       ├── requirements.txt
-│       ├── Dockerfile
-│       └── README.md
-├── docs/                         # Documentation
-│   ├── LICENSE.md
-│   ├── CONTRIBUTING.md
-│   └── BENCHMARK_REPORT_v1.md
-├── .github/
-│   └── workflows/
-│       ├── build-publish.yml
-│       └── docker-publish.yml
-└── README.md
+
+**Usage:**
+```python
+from ottoman_agent_pipeline import AgentOrchestrator
+
+orch = AgentOrchestrator()
+await orch.initialize()
+
+result = await orch.chat("عثمانلي توركجهسى")
+print(result.output)
+```
+
+**CLI:**
+```bash
+ottoman-agent chat "عثمانلي توركجهسى"
+ottoman-agent translate "بسم الله"
+ottoman-agent serve --port 8000
+```
+
+**Docs:** [ottoman-agent-pipeline/README.md](ottoman-agent-pipeline/README.md)
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone
+git clone https://github.com/bilirkesi/turkish-nlp.git
+cd turkish-nlp
+
+# Install packages
+pip install -e packages/ottoman-transliterator
+pip install -e ottoman-agent-pipeline
+
+# Initialize agent
+ottoman-agent init
+
+# Run demo
+python demos/gradio_app.py
 ```
 
 ---
 
 ## 📊 Benchmarks
 
-| Metric | Value | Target |
-|--------|-------|--------|
-| **CER** | 6.46% | < 5% |
-| **WER** | 20.69% | < 15% |
-| **BLEU** | 77.18 | > 80 |
+| Metric | Value |
+|--------|-------|
+| **CER** | 6.46% |
+| **WER** | 20.69% |
+| **BLEU** | 77.18 |
 
-*Full benchmark report: [docs/BENCHMARK_REPORT_v1.md](./docs/BENCHMARK_REPORT_v1.md)*
-
----
-
-## 🚀 Contributing
-
-Please read [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) for details.
+Full report: [docs/BENCHMARK_REPORT_v1.md](docs/BENCHMARK_REPORT_v1.md)
 
 ---
 
-## 📜 License
+## 🏗️ Architecture
 
-This project is licensed under the MIT License - see [docs/LICENSE.md](./docs/LICENSE.md) for details.
+```
+turkish-nlp/
+├── packages/
+│   └── ottoman-transliterator/   # Core transliteration package
+├── ottoman-agent-pipeline/       # Agent pipeline (submodule)
+├── demos/                        # Gradio demo app
+├── docs/                         # Documentation
+├── models/                       # Model cards
+├── datasets/                     # Dataset cards
+└── .github/workflows/            # CI/CD
+```
 
 ---
 
-**Turkish NLP** — Advanced NLP tools for Turkish language processing.
+## 🔗 Links
+
+- **GitHub:** https://github.com/bilirkesi/turkish-nlp
+- **PyPI:** https://pypi.org/project/ottoman-transliterator/
+- **HuggingFace Model:** https://huggingface.co/bilirkesi/osmanlica-v1
+- **HuggingFace Dataset:** https://huggingface.co/datasets/bilirkesi/osmanlica-bench-v1
+- **Zenodo:** https://doi.org/10.5281/zenodo.21781872
+
+---
+
+## 📄 License
+
+MIT License - See [LICENSE.md](LICENSE.md) for details.
