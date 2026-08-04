@@ -3,7 +3,7 @@
 **Turkish NLP** is a comprehensive project for Ottoman Turkish language processing, featuring:
 
 1. **Transliteration Pipeline** - Ottoman Turkish ↔ Modern Turkish conversion
-2. **Agent Pipeline** - AI agent with tools, models, and session management
+2. **Agent Pipeline** - AI agent with tools, models, and session management (see [ottoman-agent-pipeline](https://github.com/bilirkesi/ottoman-agent-pipeline))
 3. **Desktop App** - Electron-based desktop application
 4. **Mobile App** - React Native mobile application
 
@@ -35,10 +35,7 @@ print(result.modern_turkish)  # "Osmanlı Türkçesi"
 ### 2. Ottoman Agent Pipeline
 Full-featured AI agent with tools, models, and API.
 
-**Install:**
-```bash
-pip install -e ottoman-agent-pipeline
-```
+**Repo:** https://github.com/bilirkesi/ottoman-agent-pipeline
 
 **Usage:**
 ```python
@@ -53,12 +50,10 @@ print(result.output)
 
 **CLI:**
 ```bash
-ottoman-agent chat "عثمانلي توركجهسى"
+ottoman-agent chat "عثمانli توركجهسى"
 ottoman-agent translate "بسم الله"
 ottoman-agent serve --port 8000
 ```
-
-**Docs:** [ottoman-agent-pipeline/README.md](ottoman-agent-pipeline/README.md)
 
 ---
 
@@ -69,12 +64,12 @@ ottoman-agent serve --port 8000
 git clone https://github.com/bilirkesi/turkish-nlp.git
 cd turkish-nlp
 
-# Install packages
+# Install transliterator
 pip install -e packages/ottoman-transliterator
-pip install -e ottoman-agent-pipeline
 
-# Initialize agent
-ottoman-agent init
+# Install agent (separate repo)
+cd ../ottoman-agent-pipeline
+pip install -e .
 
 # Run demo
 python demos/gradio_app.py
@@ -100,7 +95,6 @@ Full report: [docs/BENCHMARK_REPORT_v1.md](docs/BENCHMARK_REPORT_v1.md)
 turkish-nlp/
 ├── packages/
 │   └── ottoman-transliterator/   # Core transliteration package
-├── ottoman-agent-pipeline/       # Agent pipeline (submodule)
 ├── demos/                        # Gradio demo app
 ├── docs/                         # Documentation
 ├── models/                       # Model cards
@@ -108,11 +102,14 @@ turkish-nlp/
 └── .github/workflows/            # CI/CD
 ```
 
+**Agent Pipeline:** https://github.com/bilirkesi/ottoman-agent-pipeline
+
 ---
 
 ## 🔗 Links
 
-- **GitHub:** https://github.com/bilirkesi/turkish-nlp
+- **GitHub (Main):** https://github.com/bilirkesi/turkish-nlp
+- **GitHub (Agent):** https://github.com/bilirkesi/ottoman-agent-pipeline
 - **PyPI:** https://pypi.org/project/ottoman-transliterator/
 - **HuggingFace Model:** https://huggingface.co/bilirkesi/osmanlica-v1
 - **HuggingFace Dataset:** https://huggingface.co/datasets/bilirkesi/osmanlica-bench-v1
